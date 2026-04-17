@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/figmaPageBg"
+    tools:context=".CompanyDetailActivity">
+
+    <!-- Scrollable body -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ========== HEADER ========== -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/figmaHeaderBg">
+
+                <!-- Back button -->
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start|top"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="56dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back"
+                    android:src="@drawable/ic_back" 
+                android:scaleType="fitCenter" 
+                android:padding="8dp" />
+
+                <!-- Company Details title (centered) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="63dp"
+                    android:text="Company Details"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold" />
+
+                <!-- Options icon (right side) -->
+                <ImageButton
+                    android:id="@+id/btnOptions"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="60dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Options"
+                    android:src="@drawable/ic_more"
+                    android:tint="@color/white" />
+            </FrameLayout>
+
+            <!-- ========== CONTENT CARD ========== -->
+            <!-- Company logo overlaps header, achieved with negative margin -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_content_card"
+                android:orientation="vertical"
+                android:layout_marginTop="-30dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="32dp">
+
+                <!-- Company logo (centered, circular) -->
+                <ImageView
+                    android:id="@+id/imgCompanyLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_company"
+                    android:background="@drawable/bg_circle_gray"
+                    android:padding="12dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Company Logo" />
+
+                <!-- Company name -->
+                <TextView
+                    android:id="@+id/tvCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Highspeed Studios"
+                    android:textColor="@color/figmaHeaderBg"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold" />
+
+                <!-- Company category -->
+                <TextView
+                    android:id="@+id/tvCompanyCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:text="Technology · Software Development"
+                    android:textColor="@color/figmaSubtitle"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@color/figmaInputBorder" />
+
+                <!-- ===== About Company section ===== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="20dp"
+                    android:text="About Company"
+                    android:textColor="@color/figmaSectionTitle"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="@color/figmaBodyText"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingMultiplier="1.5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    android:textColor="@color/figmaBodyText"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingMultiplier="1.5" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@color/figmaInputBorder" />
+
+                <!-- ===== Contact Section ===== -->
+                <!-- Phone row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Phone icon circle -->
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_contact_icon">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_briefcase"
+                            android:tint="@color/figmaPrimaryBtn"
+                            android:contentDescription="Phone" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Telephone"
+                            android:textColor="@color/figmaSubtitle"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+51 632 445 556"
+                            android:textColor="@color/figmaInputText"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Email row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Email icon circle -->
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_contact_icon">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_messages"
+                            android:tint="@color/figmaPrimaryBtn"
+                            android:contentDescription="Email" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textColor="@color/figmaSubtitle"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="highspeedst@mail.com"
+                            android:textColor="@color/figmaInputText"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@color/figmaInputBorder" />
+
+                <!-- 21 Available Jobs button -->
+                <Button
+                    android:id="@+id/btnAvailableJobs"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_figma_btn"
+                    android:text="21 Available Jobs"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

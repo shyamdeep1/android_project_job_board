@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "896697250211",
+    "project_id": "fir-login-78a19",
+    "storage_bucket": "fir-login-78a19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896697250211:android:99b8acd314a8383b43ea16",
+        "android_client_info": {
+          "package_name": "com.example.android_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896697250211-54n3lluacerno1fhvfut7err564ill68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android_project",
+            "certificate_hash": "3f57d99e81925bbc6be0067fec3c8d93687b0901"
+          }
+        },
+        {
+          "client_id": "896697250211-ptmpsjh2973812cisra3s3ns3nqf1qa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3RREVab3oqDBZEfqAQcxHrHFp6WV4IH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896697250211-ptmpsjh2973812cisra3s3ns3nqf1qa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896697250211:android:db2f6b378b5dd9fb43ea16",
+        "android_client_info": {
+          "package_name": "com.example.firebase_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896697250211-ptmpsjh2973812cisra3s3ns3nqf1qa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3RREVab3oqDBZEfqAQcxHrHFp6WV4IH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896697250211-ptmpsjh2973812cisra3s3ns3nqf1qa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- ===== SEARCH BAR ROW ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" />
+
+        <!-- Search Input with clear button -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_search_bar_outlined"
+                android:paddingStart="20dp"
+                android:paddingEnd="52dp"
+                android:text="Designer"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:imeOptions="actionSearch" />
+
+            <ImageView
+                android:id="@+id/btnClearSearch"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_close_circle_gray"
+                android:scaleType="fitCenter"
+                android:contentDescription="Clear search"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ===== SCROLLABLE CONTENT ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <!-- ===== RESULTS HEADER ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Results"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvResultCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="45 Job founded"
+                        android:textSize="14sp"
+                        android:textColor="@color/textMuted"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Filter Button -->
+                <ImageView
+                    android:id="@+id/btnFilter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_filter_sliders"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:contentDescription="Filter"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+
+            <!-- ===== ACTIVE FILTER CHIPS ===== -->
+
+            <!-- Filter Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Chip: Fulltime -->
+                <LinearLayout
+                    android:id="@+id/chipFulltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_filter_chip"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginEnd="12dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_close_circle_purple"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Remove Fulltime" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fulltime"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Chip: London -->
+                <LinearLayout
+                    android:id="@+id/chipLondon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_filter_chip"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_close_circle_purple"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Remove London" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="London"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Filter Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <!-- Chip: Remote Working -->
+                <LinearLayout
+                    android:id="@+id/chipRemote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_filter_chip"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginEnd="12dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_close_circle_purple"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Remove Remote Working" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remote Working"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Chip: Hourly -->
+                <LinearLayout
+                    android:id="@+id/chipHourly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_filter_chip"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_close_circle_purple"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Remove Hourly" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hourly"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ===== JOB LIST ===== -->
+
+            <!-- Job Item 1: Amazon -->
+            <LinearLayout
+                android:id="@+id/searchJobItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="28dp"
+                android:paddingBottom="20dp"
+                android:background="?attr/selectableItemBackground">
+
+                <!-- Company Logo -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_company"
+                    android:background="@drawable/bg_company_logo"
+                    android:scaleType="centerInside"
+                    android:padding="10dp"
+                    android:contentDescription="Amazon logo" />
+
+                <!-- Job Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="amazon"
+                        android:textSize="12sp"
+                        android:textColor="@color/textMuted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior Software Engineer"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Salary Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_money"
+                            android:contentDescription="Salary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$500 - $1,000"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <!-- Location Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_briefcase"
+                            android:contentDescription="Location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seattle, Washington, United States"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+            <!-- Job Item 2: Google -->
+            <LinearLayout
+                android:id="@+id/searchJobItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="?attr/selectableItemBackground">
+
+                <!-- Company Logo (empty for Google in Figma design) -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_company"
+                    android:background="@drawable/bg_company_logo"
+                    android:scaleType="centerInside"
+                    android:padding="10dp"
+                    android:contentDescription="Google logo" />
+
+                <!-- Job Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="google"
+                        android:textSize="12sp"
+                        android:textColor="@color/textMuted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Database Engineer"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Salary Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_money"
+                            android:contentDescription="Salary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$500 - $1,000"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <!-- Location Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_briefcase"
+                            android:contentDescription="Location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="London, United Kingdom"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+            <!-- Job Item 3: Microsoft -->
+            <LinearLayout
+                android:id="@+id/searchJobItem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="?attr/selectableItemBackground">
+
+                <!-- Company Logo -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_company"
+                    android:background="@drawable/bg_company_logo"
+                    android:scaleType="centerInside"
+                    android:padding="10dp"
+                    android:contentDescription="Microsoft logo" />
+
+                <!-- Job Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Highspeed Studios"
+                        android:textSize="12sp"
+                        android:textColor="@color/textMuted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Junior Software Engineer"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Salary Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_money"
+                            android:contentDescription="Salary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$500 - $1,000"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <!-- Location Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_briefcase"
+                            android:contentDescription="Location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jakarta, Indonesia"
+                            android:textSize="14sp"
+                            android:textColor="@color/textPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

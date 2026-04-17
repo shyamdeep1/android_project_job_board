@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/figmaPageBg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/figmaHeaderBg"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingTop="44dp"
+        android:paddingEnd="28dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_back" 
+                android:scaleType="fitCenter" 
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Broadcast Notice"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Send updates to all job seekers and companies"
+            android:textColor="#DDFFFFFF"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_content_card"
+            android:orientation="vertical"
+            android:paddingStart="28dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="28dp"
+            android:paddingBottom="28dp">
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_input_figma_active"
+                android:hint="Notification Title"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_figma"
+                android:gravity="top|start"
+                android:hint="Write your notice..."
+                android:inputType="textMultiLine"
+                android:paddingStart="24dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="18dp"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etTarget"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_figma"
+                android:hint="Target (All / Job Seekers / Companies)"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:text="All"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSendBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_figma_btn"
+                android:stateListAnimator="@null"
+                android:text="SEND NOTICE"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

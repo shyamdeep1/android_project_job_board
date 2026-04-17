@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:elevation="1dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginStart="14dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/job_seekers"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:gravity="center"
+            android:layout_marginEnd="54dp" />
+
+    </LinearLayout>
+
+    <!-- Header bottom border -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/headerBorder" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tvSignInSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in_subtitle"
+                android:textSize="13sp"
+                android:textColor="@color/textMuted"
+                android:layout_marginTop="6dp" />
+
+            <!-- Username Input -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_input_active"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:hint="@string/hint_username"
+                android:textColorHint="@color/inputHint"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <!-- Password Input -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_input_normal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="56dp"
+                    android:hint="@string/hint_password"
+                    android:textColorHint="@color/inputHint"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/ivTogglePassword"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_eye"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Toggle password"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+            </FrameLayout>
+
+            <!-- LOGIN Button -->
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_btn_primary"
+                android:text="@string/btn_login"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:letterSpacing="0.1" />
+
+            <!-- Forgot Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_password"
+                    android:textSize="13sp"
+                    android:textColor="@color/textMuted" />
+
+                <TextView
+                    android:id="@+id/tvResetHere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset_here"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/linkColor"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Divider with label -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="28dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or_sign_in_with"
+                    android:textSize="12sp"
+                    android:textColor="@color/textMuted"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/divider" />
+            </LinearLayout>
+
+            <!-- Social Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/btnGoogle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_google"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Sign in with Google"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_social_button"
+                    android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/guest"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Continue as guest"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_social_button"
+                    android:foreground="?attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+
+            <!-- CREATE ACCOUNT Button -->
+            <TextView
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_btn_secondary"
+                android:text="@string/create_account"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+                android:gravity="center"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

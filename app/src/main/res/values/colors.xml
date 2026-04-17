@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6C63FF</color>
+    <color name="colorPrimaryDark">#4B44CC</color>
+    <color name="textPrimary">#1A1A2E</color>
+    <color name="textSecondary">#555555</color>
+    <color name="textMuted">#999999</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="pageBg">#F9F9FF</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="inputBorder">#1A1A2E</color>
+    <color name="inputHint">#AAAAAA</color>
+    <color name="btnPrimary">#1A1A2E</color>
+    <color name="btnSecondary">#F3F3F3</color>
+    <color name="linkColor">#1A1A2E</color>
+    <color name="headerBorder">#EEEEEE</color>
+
+    <color name="figmaPageBg">#FBF6FF</color>
+    <color name="figmaHeaderBg">#21085B</color>
+    <color name="figmaPrimaryBtn">#40189D</color>
+    <color name="figmaInputText">#323232</color>
+    <color name="figmaInputHint">#979797</color>
+    <color name="figmaInputBorder">#E1D3FF</color>
+    <color name="figmaInputActiveBorder">#40189D</color>
+    <color name="figmaUploadText">#848484</color>
+    <color name="figmaBodyText">#313131</color>
+    <color name="figmaSectionTitle">#3D3D3D</color>
+    <color name="figmaSubtitle">#6F6F6F</color>
+
+    <color name="chatReceived">#FCEED4</color>
+    <color name="chatReceivedText">#262626</color>
+    <color name="chatTimestamp">#969696</color>
+    <color name="msgInputHint">#B0B0B0</color>
+    <color name="msgInputBorder">#DADADA</color>
+    <color name="statusBadgeGrey">#898A8D</color>
+    <color name="searchHintColor">#585858</color>
+    <color name="bottomNavInactive">#ADADAD</color>
+    <color name="headerBorderLight">#F2ECF6</color>
+</resources>

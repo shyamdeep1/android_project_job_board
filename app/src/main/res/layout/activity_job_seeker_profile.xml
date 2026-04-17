@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/figmaPageBg">
+
+    <!-- Header Background -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/figmaPrimaryBtn"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp">
+
+        <!-- Header with back button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <!-- Back Button (gray circle) -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/bg_circle_gray"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <!-- Profile Photo -->
+        <ImageView
+            android:id="@+id/ivProfilePhoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_company_logo"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_jobseeker"
+            android:contentDescription="Profile photo" />
+    </LinearLayout>
+
+    <!-- Content Card -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_content_card"
+            android:orientation="vertical"
+            android:paddingStart="28dp"
+            android:paddingTop="36dp"
+            android:paddingEnd="28dp"
+            android:paddingBottom="28dp">
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_input_figma_active"
+                android:hint="Full Name"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_figma"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <!-- Job Title -->
+            <EditText
+                android:id="@+id/etJobTitle"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_figma"
+                android:hint="Job Title"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <!-- Location -->
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_figma"
+                android:hint="Location"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:singleLine="true"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="16sp" />
+
+            <!-- About You -->
+            <EditText
+                android:id="@+id/etAbout"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_figma"
+                android:gravity="top|start"
+                android:hint="About You"
+                android:inputType="textMultiLine"
+                android:paddingStart="24dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="18dp"
+                android:textColor="@color/figmaInputText"
+                android:textColorHint="@color/figmaInputHint"
+                android:textSize="15sp" />
+
+            <!-- Save Profile Button -->
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_figma_btn"
+                android:stateListAnimator="@null"
+                android:text="SAVE PROFILE"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_figma"
+                android:text="LOGOUT"
+                android:textColor="@color/figmaBodyText"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>
